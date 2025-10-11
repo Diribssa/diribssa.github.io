@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.projects {
+  padding: 20px;
+}
+
+.project {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #007acc;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #eee;
+  margin-top: 40px;
+}
