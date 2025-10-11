@@ -10,6 +10,7 @@
       margin: 40px;
       background: #f0f0f0;
       color: #333;
+      transition: background 0.3s, color 0.3s;
     }
     header {
       text-align: center;
@@ -27,20 +28,60 @@
       padding: 20px;
       margin-bottom: 20px;
       border-left: 5px solid #007acc;
+      transition: background 0.3s, border-color 0.3s;
     }
     a {
       color: #007acc;
       text-decoration: none;
+      transition: color 0.3s;
     }
     footer {
       text-align: center;
       margin-top: 60px;
       font-size: 0.9em;
       color: #555;
+      transition: color 0.3s;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background: #121212;
+      color: #ddd;
+    }
+    body.dark-mode a {
+      color: #79b8ff;
+    }
+    body.dark-mode .project {
+      background: #1e1e1e;
+      border-left-color: #79b8ff;
+    }
+    body.dark-mode footer {
+      color: #aaa;
+    }
+
+    /* Toggle button styles */
+    .toggle-btn {
+      cursor: pointer;
+      padding: 8px 15px;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      transition: background 0.3s;
+    }
+    .toggle-btn:hover {
+      background: #005f99;
     }
   </style>
 </head>
 <body>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
   <header>
     <h1>👋 Hi, I'm Diribssa</h1>
     <p>Welcome to my Python projects portfolio.</p>
@@ -50,18 +91,24 @@
     <div class="project">
       <h2>🐍 Project 1: Data Analysis Script</h2>
       <p>A Python script for analyzing CSV data efficiently.</p>
-      <a href="https://github.com/Diribssa/project1" target="_blank">View on GitHub</a>
+      <a href="https://github.com/Diribssa/project1" target="_blank" rel="noopener noreferrer">View on GitHub</a>
     </div>
 
     <div class="project">
       <h2>📊 Project 2: Visualization Dashboard</h2>
       <p>A dashboard created using Python and Plotly.</p>
-      <a href="https://github.com/Diribssa/project2" target="_blank">View on GitHub</a>
+      <a href="https://github.com/Diribssa/project2" target="_blank" rel="noopener noreferrer">View on GitHub</a>
     </div>
   </section>
 
   <footer>
-    <p>Made with ❤️ by Diribssa | <a href="https://github.com/Diribssa" target="_blank">GitHub</a></p>
+    <p>Made with ❤️ by Diribssa | <a href="https://github.com/Diribssa" target="_blank" rel="noopener noreferrer">GitHub</a></p>
   </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
