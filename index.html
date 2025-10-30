@@ -112,8 +112,26 @@
       document.body.classList.toggle('dark-mode');
     }
   </script>
+  <script>
+    const body = document.body;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Default to dark mode unless user previously chose light
+    if (savedTheme === 'light') {
+      body.classList.remove('dark-mode');
+    } else {
+      body.classList.add('dark-mode');
+    }
+
+    const toggleBtn = document.getElementById('toggle-theme');
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+  </script>
 </body>
 </html>
+
 
 
 
